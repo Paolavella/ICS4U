@@ -14,6 +14,7 @@ import java.util.Collections;
  * School System has all the methods that are used from the menu to add, remove and so on. On a student object that is store in a arrayList and as well it could save it into a java file.
  * October 31, 2016
  * Paola Villavicencio  
+ * 
  */
 
 import java.util.Scanner;
