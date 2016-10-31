@@ -1,5 +1,6 @@
 package objects;
-
+// to trow and catch Invalid Inputs
+@SuppressWarnings("serial")
 public class InvalidInputException extends Exception{
 	public InvalidInputException(){
 		
