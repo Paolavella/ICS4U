@@ -3,24 +3,24 @@ package objectsTwo;
 public class Sort {
 
 	public static int insertionSort(int arrayToSort){
-		return insertionSort(arrayToSort);
+		insertionSort(arrayToSort);
 
 	}
 	public static int insertionSort(double array2Sort){
 		return 0;
 	}
 	public static String insertionSort(String array3){
-		return "Yes";
+		return  insertionSort(array3);
 	}
 	private static int insertionSort(int array){
 		return 0;
 
 	}
-	private static int insertionSort(int array){
+	private static double insertionSort(double array2){
 		return 0;
 
 	}
-	private static int insertionSort(int array){
+	private static String insertionSort(String arrayString){
 		return 0;
 
 	}
