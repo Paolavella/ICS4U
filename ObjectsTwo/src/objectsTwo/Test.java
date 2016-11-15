@@ -6,6 +6,9 @@ public class Test {
 	static int []array ={1,2,3,4,5,6,7,8};
 	static double []array2 ={1,2,3,4,5,6,7,8};
 	static String []array3 ={"pink","black","yellow"};
+	
+	static int []arrayToSort ={5,7,6,3,8,1,2,4,9};
+	static double []array2Sort ={5,7,6,3,8,1,2,4,9};
 	static Scanner scn = new Scanner(System.in);
 	public static void main(String[] args) {
 
