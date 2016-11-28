@@ -37,7 +37,7 @@ public class Search {
 	private static String binarySearch(int startIndex, int endIndex, String []array3, String findword){
 		int midNumber= (startIndex+endIndex)/2;// search mid number in the array
 		if (array3[midNumber].equalsIgnoreCase(findword)){// compares if the number isequals to the number the user wants to find
-			System.out.print("We found the number: " + midNumber);
+			System.out.print("We found the word: " + midNumber);
 			return findword;
 		}
 		else if (array3[midNumber].length() > findword.length()){
@@ -51,27 +51,27 @@ public class Search {
 	}
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	//Linear Search in int values that finds goes one by one through the array and finds the number the user wants 
 	private static int linearSearch(int startIndex, int endIndex, int []array, int findNumber){
@@ -109,17 +109,17 @@ public class Search {
 	}
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
 	//User frienly to only modify the number that should be search and the type of array
 	public static int binarySearch(int []array, int findNumber){//setting the other values except fot the mid value to the the private methods
 		return linearSearch(0, array.length-1, array, findNumber);//It passes the information to the private contructors which have already the starting and end points of the array
@@ -132,22 +132,22 @@ public class Search {
 	}
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	//Linear Search friendly method
 	public static int linearSearch(int []array1, int findNumber){//setting the other values except fot the mid value to the the private methods
 		return linearSearch(0, array1.length-1, array1, findNumber);//It passes the information to the private contructors which have already the starting and end points of the array
