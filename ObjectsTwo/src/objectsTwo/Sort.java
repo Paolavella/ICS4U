@@ -181,13 +181,23 @@ public class Sort {
 		for(int i=0; i<size-1; i++){
 			for (int j=0; i<size-1; j++){
 				if (array[j]>array[j+1]){
-					temp = array [j];
-					array[j]= array[j+1];
-					array[j+1]=temp;
+					swap(array,j,j+1);
 				}
 			}
 		}
 		return 0;
+	}
+	
+	private static void swap(double[]array, int i, int j){
+		double temp = array [j];
+		array[j]= array[i];
+		array[i]=temp;
+	}
+	
+	private static void swap(int[]array, int i, int j){
+		int temp = array [j];
+		array[j]= array[i];
+		array[i]=temp;
 	}
 	/**public method Bubble Sort 
 	 *String array
@@ -274,28 +284,34 @@ Then sends them to mage method when they are in the base case
 	}
 
 	private static void quickSort(int array[], int l, int r){
+		if(l == r){
+			return;
+		}
 		int index = partition(array,l,r);
+		
 		if(l<index-1)
 			quickSort(array, l, index-1);
 		if (index<r)
-			quickSort(array,index,r);
+			quickSort(array,index+1,r);
 
 
 	}
 	private static int partition(int array[], int l, int r){ 
-		int pivot= array[((r+l))/2];
-		while(l<r){
-			while (l<pivot)l++;
-			while(l>pivot)r--;
-			if (l<=r){
-				int left = array[l];
-				array[l]= array[r];
-				array[r]= left;
-				l++;
-				r++;
-			} 
+		int pivot = r;
+		int i = l-1;
+		int j = l;
+		
+		while(j<pivot){
+			if(array[j] <= array[pivot]){
+				i++;
+				swap(array, i, j);
+			}
+			j++;
 		}
-		return l;
+		i++;
+		swap(array,i,pivot);
+		
+		return i;
 	}
 }
 // if j is less than the pivot keep increasing i 
