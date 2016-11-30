@@ -176,7 +176,6 @@ public class Sort {
 	 * double array
 	 * **/
 	public static int bubbleSort(double array[]){
-		double temp;
 		int size = array.length;
 		for(int i=0; i<size-1; i++){
 			for (int j=0; i<size-1; j++){
@@ -187,31 +186,17 @@ public class Sort {
 		}
 		return 0;
 	}
-	
-	private static void swap(double[]array, int i, int j){
-		double temp = array [j];
-		array[j]= array[i];
-		array[i]=temp;
-	}
-	
-	private static void swap(int[]array, int i, int j){
-		int temp = array [j];
-		array[j]= array[i];
-		array[i]=temp;
-	}
+
+
 	/**public method Bubble Sort 
 	 *String array
 	 * **/
 	public static String bubbleSort(String array[]){
-		String temp;
 		int size = array.length;
 		for(int i=0; i<size-1; i++){
 			for (int j=0; i<size-1; j++){
 				if (array[j].compareTo(array[j+1])== 1){
-
-					temp = array [j];
-					array[j]= array[j+1];
-					array[j+1]=temp;
+					swap(array,j,j++);
 				}
 			}
 		}
@@ -276,44 +261,189 @@ Then sends them to mage method when they are in the base case
 
 
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/**public Quicksort method  
+	 *provides from the main the int array
+	 * **/
 	public static void quick(int array[]){
-		quickSort(array,0,array.length-1);
+		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
 		for(int i=0; i<array.length-1; i++){
-			System.out.print(array[i]+"");
+			System.out.print(array[i]+"  ");// prints out all the values of the array already in order
 		}
 	}
 
 	private static void quickSort(int array[], int l, int r){
-		if(l == r){
+		if(l == r){//if both begging of the array and ending are the same spot then return
 			return;
 		}
-		int index = partition(array,l,r);
-		
+		int index = partition(array,l,r);// partition 
+
 		if(l<index-1)
-			quickSort(array, l, index-1);
+			quickSort(array, l, index-1);//do left side of array
 		if (index<r)
-			quickSort(array,index+1,r);
+			quickSort(array,index+1,r);//do right side of array
 
 
 	}
 	private static int partition(int array[], int l, int r){ 
-		int pivot = r;
-		int i = l-1;
-		int j = l;
-		
-		while(j<pivot){
+		int pivot = r;//set pivot to our last spot on the array list
+		int i = l-1;//i is one less than j
+		int j = l;//j starts from the beggining of the array
+
+		while(j<pivot){// while j is less than the pivot
 			if(array[j] <= array[pivot]){
-				i++;
-				swap(array, i, j);
+				i++;//increase i and swap 
+				swap(array, i, j);// swap i and j
 			}
-			j++;
+			j++;// if greater continue increasing j
 		}
 		i++;
-		swap(array,i,pivot);
-		
-		return i;
+		swap(array,i,pivot);//swap i with pivot to check until the end of the list
+
+		return i;// i becomes the pivot therefore we return i
+	}
+
+
+
+
+
+
+
+
+
+
+
+	/**public Quicksort method  
+	 *provides from the main the double array
+	 * **/
+	public static void quick(double array[]){
+		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
+		for(int i=0; i<array.length-1; i++){
+			System.out.print(array[i]+"  ");// prints out all the values of the array already in order
+		}
+	}
+
+	private static void quickSort(double array[], int l, int r){
+		if(l == r){//if both begging of the array and ending are the same spot then return
+			return;
+		}
+		int index = partition(array,l,r);// partition 
+
+		if(l<index-1)
+			quickSort(array, l, index-1);//do left side of array
+		if (index<r)
+			quickSort(array,index+1,r);//do right side of array
+
+
+	}
+	private static int partition(double array[], int l, int r){ 
+		int pivot = r;//set pivot to our last spot on the array list
+		int i = l-1;//i is one less than j
+		int j = l;//j starts from the beggining of the array
+
+		while(j<pivot){// while j is less than the pivot
+			if(array[j] <= array[pivot]){
+				i++;//increase i and swap 
+				swap(array, i, j);// swap i and j
+			}
+			j++;// if greater continue increasing j
+		}
+		i++;
+		swap(array,i,pivot);//swap i with pivot to check until the end of the list
+
+		return i;// i becomes the pivot therefore we return i
+	}
+
+
+
+
+
+	/**public Quicksort method  
+	 *provides from the main the String array
+	 * **/
+	public static void quick(String array[]){
+		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
+		for(int i=0; i<array.length-1; i++){
+			System.out.print(array[i]+"  ");// prints out all the values of the array already in order
+		}
+	}
+
+	private static void quickSort(String array[], int l, int r){
+		if(l == r){//if both begging of the array and ending are the same spot then return
+			return;
+		}
+		int index = partition(array,l,r);// partition 
+
+		if(l<index-1)
+			quickSort(array, l, index-1);//do left side of array
+		if (index<r)
+			quickSort(array,index+1,r);//do right side of array
+
+
+	}
+	private static int partition(String array[], int l, int r){ 
+		int pivot = r;//set pivot to our last spot on the array list
+		int i = l-1;//i is one less than j
+		int j = l;//j starts from the beggining of the array
+
+		while(j<pivot){// while j is less than the pivot
+			if(array[j].compareTo(array[pivot])== -1){
+				i++;//increase i and swap 
+				swap(array, i, j);// swap i and j
+			}
+			j++;// if greater continue increasing j
+		}
+		i++;
+		swap(array,i,pivot);//swap i with pivot to check until the end of the list
+
+		return i;// i becomes the pivot therefore we return i
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/**private swaping methods: int double and string for sorts**/
+	private static void swap(int[]array, int i, int j){
+		int temp = array [j];//inputing value j into variable
+		array[j]= array[i];// inputing value i into spot j
+		array[i]=temp;//inputing value j into spot i
+	}
+	private static void swap(double[]array, int i, int j){
+		double temp = array [j];//inputing value j into variable
+		array[j]= array[i];// inputing value i into spot j
+		array[i]=temp;//inputing value j into spot i
+	}
+	private static void swap(String[]array, int i, int j){
+		String temp = array [j];//inputing value j into variable
+		array[j]= array[i];// inputing value i into spot j
+		array[i]=temp;//inputing value j into spot i
 	}
 }
-// if j is less than the pivot keep increasing i 
+
 
 

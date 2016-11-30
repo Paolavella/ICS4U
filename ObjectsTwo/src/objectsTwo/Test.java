@@ -60,10 +60,10 @@ public class Test {
 
 
 	public static void intArray() {
-		// Sort.selectionSort(arrayToSort, 0, arrayToSort.length-1);
-		// Sort.insertionSort(arrayToSort);
-		// Sort.bubbleSort(arrayToSort);
-		// Sort.mergeSort(arrayToSort);
+		Sort.selectionSort(arrayToSort, 0, arrayToSort.length-1);
+		Sort.insertionSort(arrayToSort);
+		Sort.bubbleSort(arrayToSort);
+		Sort.mergeSort(arrayToSort);
 		Sort.quick(arrayToSort);
 	}
 
@@ -72,7 +72,8 @@ public class Test {
 		Sort.selectionSort(array2Sort, 0, array2Sort.length-1);
 		Sort.insertionSort(array2Sort);
 		Sort.bubbleSort(array2Sort);
-		Sort.mergeSort(arrayToSort);
+		//Sort.mergeSort(array2Sort);
+		Sort.quick(array2Sort);
 
 	}
 
@@ -81,7 +82,8 @@ public class Test {
 		Sort.selectionSort(array3Sort, 0, array3Sort.length-1);
 		Sort.insertionSort(array3Sort);
 		Sort.bubbleSort(array3Sort);
-		Sort.mergeSort(arrayToSort);
+		//Sort.mergeSort(array3Sort);
+		Sort.quick(array3Sort);
 
 	}
 
@@ -92,37 +94,38 @@ public class Test {
 
 
 
+	/**Search methods that provide the array
+	 * **/
 
 
+	public static void gameOne() {
+		//same int array two different methods of search
+		System.out.print("Please choose a number between 1 and 8");// Find out what method to use
+		int findNumber = Integer.parseInt(scn.nextLine());
+		Search.binarySearch(array, findNumber);
+		Search.linearSearch(array, findNumber);
+	}
 
-	// public static void gameOne() {
-	// //same int array two different methods of search
-	// System.out.print("Please choose a number between 1 and 8");// Find out what method to use
-	// int findNumber = Integer.parseInt(scn.nextLine());
-	// Search.binarySearch(array, findNumber);
-	// Search.linearSearch(array, findNumber);
-	// }
-	//
-	// public static void gameTwo(){
-	// //same double array two different methods of search
-	// System.out.print("Please choose type of searcher: int or double or string");// Find out what method to use
-	// double findDouble = Integer.parseInt(scn.nextLine());
-	// Search.binarySearch(array2, findDouble);
-	// Search.linearSearch(array2, findDouble);
-	// }
-	//
-	//
-	// public static void gameThree() {
-	// //same String array two different methods of search
-	// System.out.print("Please choose type of colour: pink, yellow or black");// Find out what method to use
-	// String answer = scn.nextLine();
-	// Search.binarySearch(array3, answer);
-	// Search.linearSearch(array3, answer);
-	//
-	//
-	// }
-	//
-	//
+	public static void gameTwo(){
+		//same double array two different methods of search
+		System.out.print("Please choose type of searcher: int or double or string");// Find out what method to use
+		double findDouble = Integer.parseInt(scn.nextLine());
+		Search.binarySearch(array2, findDouble);
+		Search.linearSearch(array2, findDouble);
+	}
+
+
+	public static void gameThree() {
+		//same String array two different methods of search
+		System.out.print("Please choose type of colour: pink, yellow or black");// Find out what method to use
+		String answer = scn.nextLine();
+		Search.binarySearch(array3, answer);
+		Search.linearSearch(array3, answer);
+
+
+	}
+
+
 }
 
 
