@@ -158,49 +158,55 @@ public class Sort {
 	/**public method Bubble Sort 
 	 * int array
 	 * **/
-	public static int bubbleSort(int array[]){
-		int temp;
+	public static void bubbleSort(int array[]){
 		int size = array.length;
-		for(int i=0; i<size-1; i++){
-			for (int j=0; i<size-1; j++){
-				if (array[j]>array[j+1]){
-					temp = array [j];
-					array[j]= array[j+1];
-					array[j+1]=temp;
-				}
-			}
+		int j=1;
+		int i=0;
+		while (i<size-1){
+			while (j<size-1){
+				if (array[i]>array[j]){
+					swap(array,i,j);
+				}j++;
+			}i++;
+
 		}
-		return 0;
+		System.out.println("The Bubble array is: " );
+		for (int g = 0;g<size;g++ )
+		{
+			System.out.print( array[g]+", ");
+		}
 	}
 	/**public method Bubble Sort 
 	 * double array
 	 * **/
-	public static int bubbleSort(double array[]){
+	public static void bubbleSort(double array[]){
 		int size = array.length;
-		for(int i=0; i<size-1; i++){
-			for (int j=0; i<size-1; j++){
-				if (array[j]>array[j+1]){
-					swap(array,j,j+1);
-				}
-			}
-		}
-		return 0;
+		int j=0;
+		int i=j-1;
+		while (i<size-1){
+			while (j<size-1){
+				if (array[i]>array[j]){
+					swap(array,i,j);
+				}j++;
+			}i++;
+		}System.out.println("The Bubble array is: " + array);
+
 	}
 
 
 	/**public method Bubble Sort 
 	 *String array
 	 * **/
-	public static String bubbleSort(String array[]){
+	public static void bubbleSort(String array[]){
 		int size = array.length;
-		for(int i=0; i<size-1; i++){
+		for(int i=-1; i<size-1; i++){
 			for (int j=0; i<size-1; j++){
-				if (array[j].compareTo(array[j+1])== 1){
-					swap(array,j,j++);
+				if (array[i].compareTo(array[j])== 1){
+					swap(array,i,j);					
 				}
 			}
-		}
-		return "array[]";
+		}System.out.println("The Bubble array is: " + array);
+
 	}
 
 
@@ -279,8 +285,10 @@ Then sends them to mage method when they are in the base case
 	 * **/
 	public static void quick(int array[]){
 		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
+		System.out.println("");
+		System.out.println("Quick sorted:");
 		for(int i=0; i<array.length-1; i++){
-			System.out.print(array[i]+"  ");// prints out all the values of the array already in order
+			System.out.print(array[i]+",  ");// prints out all the values of the array already in order
 		}
 	}
 
@@ -330,8 +338,10 @@ Then sends them to mage method when they are in the base case
 	 * **/
 	public static void quick(double array[]){
 		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
+		System.out.println("");
+		System.out.println("Quick sorted:");
 		for(int i=0; i<array.length-1; i++){
-			System.out.print(array[i]+"  ");// prints out all the values of the array already in order
+			System.out.print(array[i]+", ");// prints out all the values of the array already in order
 		}
 	}
 
@@ -375,8 +385,10 @@ Then sends them to mage method when they are in the base case
 	 * **/
 	public static void quick(String array[]){
 		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
+		System.out.println("");
+		System.out.println("Quick sorted:");
 		for(int i=0; i<array.length-1; i++){
-			System.out.print(array[i]+"  ");// prints out all the values of the array already in order
+			System.out.print(array[i]+", ");// prints out all the values of the array already in order
 		}
 	}
 

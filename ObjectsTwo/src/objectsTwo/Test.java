@@ -21,7 +21,7 @@ public class Test {
 
 
 	private static void menu() {
-		System.out.print("Please choose type of searcher: int or double or string. For SORTING enter sort");// Find out what method to use
+		System.out.println("Please choose type of searcher: int or double or string. For SORTING enter sort");// Find out what method to use
 		String answer =scn.nextLine();
 		if (answer.equalsIgnoreCase("int")){
 			//gameOne();
@@ -63,7 +63,7 @@ public class Test {
 		Sort.selectionSort(arrayToSort, 0, arrayToSort.length-1);
 		Sort.insertionSort(arrayToSort);
 		Sort.bubbleSort(arrayToSort);
-		Sort.mergeSort(arrayToSort);
+		//Sort.mergeSort(arrayToSort);
 		Sort.quick(arrayToSort);
 	}
 
