@@ -21,6 +21,7 @@ public class Test {
 
 
 	private static void menu() {
+		System.out.println("");
 		System.out.println("Please choose type of searcher: int or double or string. For SORTING enter sort");// Find out what method to use
 		String answer =scn.nextLine();
 		if (answer.equalsIgnoreCase("int")){

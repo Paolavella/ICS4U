@@ -255,16 +255,19 @@ Then sends them to mage method when they are in the base case
 	 *compares numbers and merge them together to sort them
 	 * **/
 
-	private static void merge(int leftA[], int rightA[]) {
-		int []finArray= new int[2];
-
-		if(leftA[0]<rightA[0]){
-			finArray[0]=leftA[0];
+	private static void merge(int array[], int leftA[], int rightA[]) {
+		int []finArray= new int[10];int i=0; 
+		while(i< array.length){
+			for(int j=0; j< i; j++){
+				if(leftA[j]<rightA[i]){
+					finArray[j]=leftA[i];
+					i++;
+				}
+				else if(leftA[j]>rightA[i]){
+					finArray[i]=rightA[j];
+				}
+			}
 		}
-		else if(leftA[0]>rightA[0]){
-			finArray[0]=rightA[0];
-		}
-
 
 	}
 
