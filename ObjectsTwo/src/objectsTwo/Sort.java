@@ -1,31 +1,41 @@
-
 package objectsTwo;
 
 public class Sort {
 
 
+
 	// friendly method Insertion Sort for int, String and String arrays.
-	public static int insertionSort(int arrayToSort[]){
-		return insertionSort(arrayToSort, 0, arrayToSort.length-1);
-
+	public static void insertionSort(int arrayToSort[]){
+		insertionSort(arrayToSort, 0, arrayToSort.length-1);
+		System.out.println("");
+		System.out.println("Insertion sorted: " );
+		for (int g = 0;g<arrayToSort.length;g++ )
+		{
+			System.out.print( arrayToSort[g]+", ");
+		}
 	}
-	public static double insertionSort(double array2Sort[]){
-		return insertionSort(array2Sort,0, array2Sort.length-1);
+	public static void insertionSort(double array2Sort[]){
+		insertionSort(array2Sort,0, array2Sort.length-1);
+		System.out.println("");
+		System.out.println("Insertion sorted: " );
+		for (int g = 0;g<array2Sort.length;g++ )
+		{
+			System.out.print( array2Sort[g]+", ");
+		}
 	}
-	public static String insertionSort(String array3[]){
-		return insertionSort(array3,0, array3.length-1);
+	public static void insertionSort(String array3[]){
+		insertionSort(array3,0, array3.length-1);
+		System.out.println("");
+		System.out.println("Insertion sorted: " );
+		for (int g = 0;g<array3.length;g++ )
+		{
+			System.out.print( array3[g]+", ");
+		}
 	}
-
-
-
-
-
-
-
 	/**private method Insertion Sort 
 	 * int array
 	 * **/
-	private static int insertionSort(int array[], int startIndex, int endIndex){
+	private static void insertionSort(int array[], int startIndex, int endIndex){
 		int temp;
 		int size = array.length;
 		for (int i = 1; i< size; i++){
@@ -36,13 +46,11 @@ public class Sort {
 				array [j] =temp;
 			}
 		}
-		return 0;
-
 	}
 	/**private method Insertion Sort 
 	 * double array
 	 * **/
-	private static int insertionSort(double array2[], int startIndex, int endIndex){
+	private static void insertionSort(double array2[], int startIndex, int endIndex){
 		double temp;
 		int size = array2.length;
 		for (int i = 1; i< size; i++){
@@ -53,13 +61,11 @@ public class Sort {
 				array2[j] =temp;
 			}
 		}
-		return 0;
-
 	}
 	/**private method Insertion Sort 
 	 * String array
 	 * **/
-	private static String insertionSort(String arrayString[],int startIndex, int endIndex){
+	private static void insertionSort(String arrayString[],int startIndex, int endIndex){
 		String temp;
 		int size = arrayString.length;
 		for (int i = 1; i< size; i++){
@@ -70,14 +76,43 @@ public class Sort {
 				arrayString[j] =temp;
 			}
 		}
-		return "yes";
-
 	}
 
+
+
+
+	// friendly method Selection Sort for int, String and String arrays.
+	public static void selectionSort(int arrayToSort[]){
+		selectionSort(arrayToSort, 0, arrayToSort.length-1);
+		System.out.println("");
+		System.out.println("Selection sorted: " );
+		for (int g = 0;g<arrayToSort.length;g++ )
+		{
+			System.out.print( arrayToSort[g]+", ");
+		}
+	}
+	public static void selectionSort(double array2Sort[]){
+		selectionSort(array2Sort,0, array2Sort.length-1);
+		System.out.println("");
+		System.out.println("Selection sorted: " );
+		for (int g = 0;g<array2Sort.length;g++ )
+		{
+			System.out.print( array2Sort[g]+", ");
+		}
+	}
+	public static void selectionSort(String array3[]){
+		selectionSort(array3,0, array3.length-1);
+		System.out.println("");
+		System.out.println("Selection sorted: " );
+		for (int g = 0;g<array3.length;g++ )
+		{
+			System.out.print( array3[g]+", ");
+		}
+	}
 	/**public method Selection Sort 
 	 * Int array
 	 * **/
-	public static int selectionSort(int array[], int startIndex, int endIndex){
+	static void selectionSort(int array[], int startIndex, int endIndex){
 		int temp, min;
 		int size = array.length;
 		for (int i = 0; i< size; i++){
@@ -92,13 +127,11 @@ public class Sort {
 			array[i] = temp;
 		}
 
-		return 0;
-
 	}
 	/**public method Selection Sort 
 	 * double array
 	 * **/
-	public static double selectionSort(double array2[], int startIndex, int endIndex){
+	private static void selectionSort(double array2[], int startIndex, int endIndex){
 		double temp;
 		int min;
 		int size = array2.length;
@@ -113,14 +146,11 @@ public class Sort {
 			array2[min]= array2[i];
 			array2[i] = temp;
 		}
-
-		return 0;
-
 	}
 	/**public method Selection Sort 
 	 * String array
 	 * **/
-	public static String selectionSort(String arrayString[],int startIndex, int endIndex){
+	public static void selectionSort(String arrayString[],int startIndex, int endIndex){
 		String temp;
 		int min;
 		int size = arrayString.length;
@@ -135,9 +165,6 @@ public class Sort {
 			arrayString[min]= arrayString[i];
 			arrayString[i] = temp;
 		}
-
-		return "No";
-
 	}
 
 
@@ -170,7 +197,8 @@ public class Sort {
 			}i++;
 
 		}
-		System.out.println("The Bubble array is: " );
+		System.out.println("");
+		System.out.println("Bubble sorted: " );
 		for (int g = 0;g<size;g++ )
 		{
 			System.out.print( array[g]+", ");
@@ -189,7 +217,13 @@ public class Sort {
 					swap(array,i,j);
 				}j++;
 			}i++;
-		}System.out.println("The Bubble array is: " + array);
+		}
+		System.out.println("");
+		System.out.println("Bubble sorted: " );
+		for (int g = 0;g<size;g++ )
+		{
+			System.out.print( array[g]+", ");
+		}
 
 	}
 
@@ -202,10 +236,16 @@ public class Sort {
 		for(int i=-1; i<size-1; i++){
 			for (int j=0; i<size-1; j++){
 				if (array[i].compareTo(array[j])== 1){
-					swap(array,i,j);					
+					swap(array,i,j); 
 				}
 			}
-		}System.out.println("The Bubble array is: " + array);
+		}
+		System.out.println("");
+		System.out.println("Bubble sorted: " );
+		for (int g = 0;g<size;g++ )
+		{
+			System.out.print( array[g]+", ");
+		}
 
 	}
 
@@ -219,55 +259,193 @@ Then sends them to mage method when they are in the base case
 	/**public method Merge Sort 
 	 *int array
 	 * **/
-	public static void mergeSort(int array[]){
-		if (array.length == 0){
-			return;
+
+	private static void doMerge(int[] numbers, int left, int mid, int right){
+
+		int[] array= new int[numbers.length];
+		int i;
+		int left_end; 
+		int num_elements; 
+		int tmp_pos;
+
+		left_end= mid-1;
+		tmp_pos=left;
+		num_elements = (right-left+1);
+
+		while (left <=left_end &&(mid<= right)){
+
+			if (numbers[left]<=numbers[mid]){
+				array[tmp_pos++]=numbers[left++];
+			}
+			else{
+				array[tmp_pos++]=numbers[mid++];
+			}
+			while (mid<= left_end)
+				array[tmp_pos++] = numbers[mid++];
+
+			for (i=0; i< num_elements; i ++){
+				numbers[right] = array[right];
+				right--;
+			}
 		}
-
-		int a = (array.length/2);
-		int leftHalf[] = new int [a+1];
-		for(int p = 0; p<a; p++){
-			leftHalf[p]= array[p];
-			mergeSort(leftHalf);}
+	}
 
 
-		int b = array.length-a+1;
-		int rightHalf[] = new int [b];
-		for(int p = a; p<b; p++){
-			rightHalf[p]= array[a+p+1];
-			mergeSort(rightHalf);
+	private static void mergeRecursive(int [] numbers, int left, int right)
+	{
+		int mid;
+
+		if (right>left){
+			mid = (left + right)/2;
+			mergeRecursive(numbers, left, mid);
+			mergeRecursive (numbers, (mid+1), right);
+			doMerge(numbers, left, (mid+1), right);
 		}
-		merge(leftHalf, rightHalf);
+	}
+
+
+	/**Public frienly MergeSort method
+	 * int array
+	 * **/
+	public static void mergeSort(int [] arrayToSort)
+	{
+		System.out.println("");
+		System.out.println("MergeSort By Recursive Method");
+
+		mergeRecursive(arrayToSort, 0, arrayToSort.length - 1);
+		for (int i = 0; i < 9; i++)
+			System.out.print(arrayToSort[i]+", ");
+
+	}
+
+	/**public Merge Sort methods are usually to divide array in to half and take left then go to right 
+Then sends them to mage method when they are in the base case
+	 * **/
+	/**public method Merge Sort 
+	 *double array
+	 * **/
+
+	private static void doMerge(double []numbers, int left, int mid, int right){
+
+		double[] array= new double[numbers.length];
+		double i;
+		double left_end; 
+		double num_elements; 
+		int tmp_pos;
+
+		left_end= mid-1;
+		tmp_pos=left;
+		num_elements = (right-left+1);
+
+		while (left <=left_end &&(mid<= right)){
+
+			if (numbers[left]<=numbers[mid]){
+				array[tmp_pos++]=numbers[left++];
+			}
+			else{
+				array[tmp_pos++]=numbers[mid++];
+			}
+			while (mid<= left_end)
+				array[tmp_pos++] = numbers[mid++];
+
+			for (i=0; i< num_elements; i ++){
+				numbers[right] = array[right];
+				right--;
+			}
+		}
+	}
+
+
+	private static void mergeRecursive(double [] numbers, int left, int right)
+	{
+		int mid;
+
+		if (right>left){
+			mid = (left + right)/2;
+			mergeRecursive(numbers, left, mid);
+			mergeRecursive (numbers, (mid+1), right);
+			doMerge(numbers, left, (mid+1), right);
+		}
+	}
+
+
+	/**Public frienly MergeSort method
+	 * int array
+	 * **/
+	public static void mergeSort(double [] arrayToSort)
+	{
+		System.out.println("");
+		System.out.println("MergeSort By Recursive Method");
+
+		mergeRecursive(arrayToSort, 0, arrayToSort.length - 1);
+		for (int i = 0; i < 9; i++)
+			System.out.print(arrayToSort[i]+", ");
 
 	}
 
 
-
-
-
-	/**public method Merge Sort 
-	 *double array
+	/**public Merge Sort methods are usually to divide array in to half and take left then go to right 
+Then sends them to mage method when they are in the base case
 	 * **/
 	/**public method Merge Sort 
 	 *String array
 	 * **/
-	/**private Merge method  
-	 *compares numbers and merge them together to sort them
-	 * **/
 
-	private static void merge(int array[], int leftA[], int rightA[]) {
-		int []finArray= new int[10];int i=0; 
-		while(i< array.length){
-			for(int j=0; j< i; j++){
-				if(leftA[j]<rightA[i]){
-					finArray[j]=leftA[i];
-					i++;
-				}
-				else if(leftA[j]>rightA[i]){
-					finArray[i]=rightA[j];
-				}
+	private static void doMerge(String []numbers, int left, int mid, int right){
+
+		String[] array= new String[numbers.length];
+		int i;
+		int left_end; 
+		int num_elements; 
+		int tmp_pos;
+
+		left_end= mid-1;
+		tmp_pos=left;
+		num_elements = (right-left+1);
+
+		while (left <=left_end &&(mid<= right)){
+
+			if (numbers[left].compareTo(numbers[mid])==-1){
+				array[tmp_pos++]=numbers[left++];
+			}
+			else{
+				array[tmp_pos++].compareTo(numbers[mid++]);
+			}
+			while (mid<= left_end)
+				array[tmp_pos++]=(numbers[mid++]);
+
+			for (i=0; i< num_elements; i ++){
+				numbers[right] = array[right];
+				right--;
 			}
 		}
+	}
+
+
+	private static void mergeRecursive(String [] numbers, int left, int right)
+	{
+		int mid;
+		mid = (left + right)/2;
+		if (right>left){
+			
+			mergeRecursive(numbers, left, mid);
+			mergeRecursive (numbers, (mid+1), right);
+			doMerge(numbers, left, (mid+1), right);
+		}
+	}
+
+
+	/**Public frienly MergeSort method
+	 * int array
+	 * **/
+	public static void mergeSort(String [] array3)
+	{
+		System.out.println("");
+		System.out.println("MergeSort By Recursive Method");
+
+		mergeRecursive(array3, 0, array3.length - 1);
+		for (int i = 0; i < 9; i++)
+			System.out.print(array3[i]+", ");
 
 	}
 
@@ -290,7 +468,7 @@ Then sends them to mage method when they are in the base case
 		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
 		System.out.println("");
 		System.out.println("Quick sorted:");
-		for(int i=0; i<array.length-1; i++){
+		for(int i=0; i<array.length; i++){
 			System.out.print(array[i]+",  ");// prints out all the values of the array already in order
 		}
 	}
@@ -343,7 +521,7 @@ Then sends them to mage method when they are in the base case
 		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
 		System.out.println("");
 		System.out.println("Quick sorted:");
-		for(int i=0; i<array.length-1; i++){
+		for(int i=0; i<array.length; i++){
 			System.out.print(array[i]+", ");// prints out all the values of the array already in order
 		}
 	}
@@ -390,7 +568,7 @@ Then sends them to mage method when they are in the base case
 		quickSort(array,0,array.length-1);//calls quick sort: sets the start of the array and the end
 		System.out.println("");
 		System.out.println("Quick sorted:");
-		for(int i=0; i<array.length-1; i++){
+		for(int i=0; i<array.length; i++){
 			System.out.print(array[i]+", ");// prints out all the values of the array already in order
 		}
 	}
