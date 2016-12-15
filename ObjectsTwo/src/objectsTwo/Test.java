@@ -66,21 +66,21 @@ public class Test {
 
 	public static void intArray() {
 		for(int a=0; a<arrayToSort.length;a++){
-			System.out.print("Input double:");
+			System.out.print("Input integer:");
 			int x = Integer.parseInt(scn.nextLine());
 			arrayToSort[a]=x;
 		}
 		Sort.selectionSort(arrayToSort);
 		Sort.insertionSort(arrayToSort);
 		Sort.bubbleSort(arrayToSort);
-		//Sort.mergeSort(arrayToSort);
+		Sort.mergeSort(arrayToSort);
 		Sort.quick(arrayToSort);
 	}
 
 
 	public static void doubleArray() {
 		for(int a=0; a<array2Sort.length;a++){
-			System.out.print("Input integer:");
+			System.out.print("Input double:");
 			double x = Double.parseDouble(scn.nextLine());
 			array2Sort[a]=x;
 		}

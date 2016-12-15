@@ -207,47 +207,106 @@ public class Sort {
 	/**public method Bubble Sort 
 	 * double array
 	 * **/
-	public static void bubbleSort(double array[]){
-		int size = array.length;
-		int j=0;
-		int i=j-1;
-		while (i<size-1){
-			while (j<size-1){
-				if (array[i]>array[j]){
-					swap(array,i,j);
-				}j++;
-			}i++;
-		}
-		System.out.println("");
-		System.out.println("Bubble sorted: " );
-		for (int g = 0;g<size;g++ )
+	public static double[] bubbleSort(double  [ ]a )
+	{
+		int j;
+
+
+
+		for(int c = 0; c < a.length - 1; c++)
 		{
-			System.out.print( array[g]+", ");
+			// keeps looping until end is true
+
+			for( j=0;  j < a.length -1;  j++ )
+			{
+				// creates a loop for index's of array a
+				int i= j+1;
+
+				if ( a[ j ] > a[i] )  
+				{
+
+					swap(a, i, j);
+
+					//while the value of a at index j is greater then the value of a at index i 
+					//the values of a at index i and a at index j swap.
+
+				} 
+			} 
 		}
-
-	}
-
-
-	/**public method Bubble Sort 
+		return a;
+		// returns the sorted array a.
+	} 
+/**public method Bubble Sort 
 	 *String array
 	 * **/
-	public static void bubbleSort(String array[]){
-		int size = array.length;
-		for(int i=-1; i<size-1; i++){
-			for (int j=0; i<size-1; j++){
-				if (array[i].compareTo(array[j])== 1){
-					swap(array,i,j); 
-				}
-			}
-		}
-		System.out.println("");
-		System.out.println("Bubble sorted: " );
-		for (int g = 0;g<size;g++ )
-		{
-			System.out.print( array[g]+", ");
-		}
+	public static String[] bubbleSort( String [ ]a )
+	{
+		int j;
 
-	}
+
+
+		for(int c = 0; c < a.length - 1; c++)
+		{
+			// keeps looping until end is true
+
+			for( j=0;  j < a.length -1;  j++ )
+			{
+				// creates a loop for index's of array a
+				int i= j+1;
+
+				if ( a[ j ].compareTo( a[i])>0)  
+				{
+
+					swap(a, i, j);
+
+					//while the value of a at index j is greater then the value of a at index i 
+					//the values of a at index i and a at index j swap.
+
+				} 
+			} 
+		}
+		return a;
+		// returns the sorted array a.
+	} 
+//	public static void bubbleSort(double array[]){
+//		int size = array.length;
+//		int j=0;
+//		int i=j-1;
+//		while (i<size-1){
+//			while (j<size-1){
+//				if (array[i]>array[j]){
+//					swap(array,i,j);
+//				}j++;
+//			}i++;
+//		}
+//		System.out.println("");
+//		System.out.println("Bubble sorted: " );
+//		for (int g = 0;g<size;g++ )
+//		{
+//			System.out.print( array[g]+", ");
+//		}
+//
+//	}
+
+
+	
+//	public static void bubbleSort(String array[]){
+//		int size = array.length;
+//		for(int i=-1; i<size-1; i++){
+//			for (int j=0; i<size-1; j++){
+//				if (array[i].compareTo(array[j])== 1){
+//					swap(array,i,j); 
+//				}
+//			}
+//		}
+//		System.out.println("");
+//		System.out.println("Bubble sorted: " );
+//		for (int g = 0;g<size;g++ )
+//		{
+//			System.out.print( array[g]+", ");
+//		}
+//
+//	}
 
 
 
