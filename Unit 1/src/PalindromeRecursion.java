@@ -15,6 +15,7 @@ public class PalindromeRecursion {
 	        else
 	            System.out.println(string + " is not a palindrome");
 
+	}
 	//My Method to check
     public static boolean isPal(String s)
     {   // if length is 0 or 1 then String is palindrome

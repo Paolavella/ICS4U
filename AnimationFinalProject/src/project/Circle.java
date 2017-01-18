@@ -60,6 +60,7 @@ package project;
 		 * @param c
 		 * @return
 		 */
+		
 		public boolean equals(Circle c) {
 			if (radius == c.getRadius())
 				return true;
